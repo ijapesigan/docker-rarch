@@ -27,8 +27,7 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman \
             texlive-latexextra \
             texlive-bibtexextra \
             texlive-fontsextra \
-            biber \
-            texlive-latexindent-meta
+            biber
 
 # install R packages
 # development packages
