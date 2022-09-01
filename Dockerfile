@@ -51,6 +51,14 @@ RUN R -e "install.packages(                                   \
       repos = 'https://packagemanager.rstudio.com/all/latest' \
     )"
 
+RUN R -e "remotes::install_github( \
+      c(                           \
+        'rstudio/tinytex',         \
+        'r-lib/cli',               \
+        'r-lib/devtools'           \
+      )                            \
+    )"
+
 # remove the packages downloaded to image's pacman cache dir.
 RUN pacman -Sy --noconfirm pacman-contrib
 RUN paccache -r -k0
