@@ -10,23 +10,23 @@ RUN echo 'LANG=en_US.UTF-8' > /etc/locale.conf
 
 # install packages
 RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman \
-    pacman -Syu --noconfirm --needed \
-            base \
-            base-devel \
-            wget \
-            xz \
-            pandoc \
-            git \
-            parallel \
-            vim \
-            gcc-fortran \
-            openblas \
-            r \
-            texlive-most \
-            texlive-core \
-            texlive-latexextra \
-            texlive-bibtexextra \
-            texlive-fontsextra \
+    pacman -Syu --noconfirm --needed                           \
+            base                                               \
+            base-devel                                         \
+            wget                                               \
+            xz                                                 \
+            pandoc                                             \
+            git                                                \
+            parallel                                           \
+            vim                                                \
+            gcc-fortran                                        \
+            openblas                                           \
+            r                                                  \
+            texlive-most                                       \
+            texlive-core                                       \
+            texlive-latexextra                                 \
+            texlive-bibtexextra                                \
+            texlive-fontsextra                                 \
             biber
 
 # install R packages
@@ -41,12 +41,11 @@ RUN R -e "install.packages(                                   \
         'microbenchmark',                                     \
         'pkgdown',                                            \
         'remotes',                                            \
-        'renv',                                               \
-        'rhub',                                               \
         'rmarkdown',                                          \
         'rprojroot',                                          \
         'styler',                                             \
-        'testthat'                                            \
+        'testthat',                                           \
+        'tidyverse'                                           \
       ),                                                      \
       repos = 'https://packagemanager.rstudio.com/all/latest' \
     )"
@@ -55,7 +54,8 @@ RUN R -e "remotes::install_github( \
       c(                           \
         'rstudio/tinytex',         \
         'r-lib/cli',               \
-        'r-lib/devtools'           \
+        'r-lib/devtools',          \
+        'r-hub/rhub'               \
       )                            \
     )"
 
