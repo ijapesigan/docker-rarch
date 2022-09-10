@@ -38,7 +38,9 @@ RUN R -e "install.packages(                                   \
         'ggplot2',                                            \
         'knitr',                                              \
         'lintr',                                              \
+        'magick',                                             \
         'microbenchmark',                                     \
+        'pdftools'                                            \
         'pkgdown',                                            \
         'remotes',                                            \
         'rmarkdown',                                          \
