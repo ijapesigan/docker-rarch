@@ -40,7 +40,7 @@ RUN R -e "install.packages(                                   \
         'lintr',                                              \
         'magick',                                             \
         'microbenchmark',                                     \
-        'pdftools'                                            \
+        'pdftools',                                           \
         'pkgdown',                                            \
         'remotes',                                            \
         'rmarkdown',                                          \
