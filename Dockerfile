@@ -59,7 +59,7 @@ RUN R -e "remotes::install_github( \
 RUN R -e "tinytex::install_tinytex( \
       bundle = 'TinyTeX-2',         \
       force = TRUE,                 \
-      dir = '/usr/local/bin'        \
+      dir = '/opt'                  \
     )"
 
 # remove the packages downloaded to image's pacman cache dir.
