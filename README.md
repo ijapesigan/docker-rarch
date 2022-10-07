@@ -8,12 +8,31 @@ Ivan Jacob Agaloos Pesigan
 
 ## Description
 
-A docker container for the `template` project.
+Docker and Apptainer/Singularity containers for the `template` project.
 
-## Run
+## Build Docker Container
 
-Run the following in the terminal.
+The `Docker Image CI` Github action builds the Docker container and pushes it to Docker Hub.
+
+## Build Apptainer/Singularity Image File
+
+To build the Apptainer/Singularity image file (`template.sif`),
+run the following.
+
+```bash
+git clone https://github.com/jeksterslab/docker-template.git
+cd docker-template
+make
+```
+
+## Docker Run
 
 ```bash
 docker run -it jeksterslab/template
+```
+
+## Apptainer Shell
+
+```bash
+apptainer shell template.sif
 ```
