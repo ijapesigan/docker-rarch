@@ -21,13 +21,7 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman \
             vim                                                \
             gcc-fortran                                        \
             openblas                                           \
-            r                                                  \
-            texlive-most                                       \
-            texlive-core                                       \
-            texlive-latexextra                                 \
-            texlive-bibtexextra                                \
-            texlive-fontsextra                                 \
-            biber
+            r
 
 # install R packages
 # development packages
@@ -60,6 +54,8 @@ RUN R -e "remotes::install_github( \
         'r-hub/rhub'               \
       )                            \
     )"
+
+RUN R -e "tinytex::install_tinytex(bundle = 'TinyTeX-2', force = TRUE)"
 
 # remove the packages downloaded to image's pacman cache dir.
 RUN pacman -Sy --noconfirm pacman-contrib
