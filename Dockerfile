@@ -41,7 +41,8 @@ RUN R -e "install.packages(                                   \
         'rprojroot',                                          \
         'styler',                                             \
         'testthat',                                           \
-        'tidyverse'                                           \
+        'tidyverse',                                          \
+        'qpdf'                                                \
       ),                                                      \
       repos = 'https://packagemanager.rstudio.com/all/latest' \
     )"
