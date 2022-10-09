@@ -8,7 +8,7 @@ Ivan Jacob Agaloos Pesigan
 
 ## Description
 
-Docker and Apptainer/Singularity containers for the `template` project.
+Docker and Apptainer/Singularity containers for the `template` project based on Archlinux.
 
 ## Build Docker Container
 
