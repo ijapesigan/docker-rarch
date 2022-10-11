@@ -13,6 +13,8 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman \
     pacman -Syu --noconfirm --needed                           \
             base                                               \
             base-devel                                         \
+            poppler                                            \
+            imagemagick                                        \
             wget                                               \
             xz                                                 \
             pandoc                                             \
