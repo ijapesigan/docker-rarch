@@ -40,6 +40,7 @@ RUN R -e "install.packages(                                   \
         'microbenchmark',                                     \
         'pdftools',                                           \
         'pkgdown',                                            \
+        'ragg',                                               \
         'remotes',                                            \
         'rmarkdown',                                          \
         'rprojroot',                                          \
