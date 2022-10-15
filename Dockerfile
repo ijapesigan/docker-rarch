@@ -23,6 +23,7 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman \
             parallel                                           \
             vim                                                \
             nnn                                                \
+            bat                                                \
             gcc-fortran                                        \
             openblas                                           \
             r
