@@ -20,10 +20,11 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman \
             pandoc                                             \
             git                                                \
             lazygit                                            \
+            bat                                                \
+            rsync                                              \
             parallel                                           \
             vim                                                \
             nnn                                                \
-            bat                                                \
             gcc-fortran                                        \
             openblas                                           \
             r
