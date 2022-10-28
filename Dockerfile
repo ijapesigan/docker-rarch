@@ -63,6 +63,7 @@ RUN R -e "remotes::install_github( \
       )                            \
     )"
 
+
 RUN R -e "tinytex::install_tinytex( \
       bundle = 'TinyTeX-2',         \
       force = TRUE,                 \
@@ -70,6 +71,12 @@ RUN R -e "tinytex::install_tinytex( \
     )"
 
 ENV PATH="/opt/bin/x86_64-linux:${PATH}"
+
+RUN R -e "remotes::install_github( \
+      c(                           \
+        'jeksterslab/rProject'     \
+      )                            \
+    )"
 
 # remove the packages downloaded to image's pacman cache dir.
 RUN pacman -Sy --noconfirm pacman-contrib
