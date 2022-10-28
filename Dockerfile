@@ -79,5 +79,4 @@ RUN paccache -r -k0
 MAINTAINER "Ivan Jacob Agaloos Pesigan <r.jeksterslab@gmail.com>"
 
 # extra metadata
-LABEL version="0.9.1"
-LABEL description="template_0.9.1 archlinux container."
+LABEL description="rarch container."

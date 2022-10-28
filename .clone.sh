@@ -1,6 +1,6 @@
 #! /usr/bin/bash
 
-git clone git@github.com:jeksterslab/docker-template.git
+git clone git@github.com:jeksterslab/docker-rarch.git
 rm -rf "$PWD.git"
-mv docker-template/.git $PWD
-rm -rf docker-template
+mv docker-rarch/.git $PWD
+rm -rf docker-rarch
