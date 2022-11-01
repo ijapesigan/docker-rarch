@@ -13,7 +13,7 @@ Docker and Apptainer/Singularity containers for R projects based on Archlinux.
 
 ## Build Docker Container
 
-The `Docker Build and Push` Github action builds the Docker container and pushes it to Docker Hub.
+The `Docker Build and Push` GitHub action builds the Docker container and pushes it to Docker Hub.
 
 ## Build Apptainer/Singularity Image File
 
