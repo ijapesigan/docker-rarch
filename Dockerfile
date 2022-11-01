@@ -35,6 +35,7 @@ RUN R -e "install.packages(                                   \
       c(                                                      \
         'covr',                                               \
         'devtools',                                           \
+        'distro',                                             \
         'ggplot2',                                            \
         'knitr',                                              \
         'lintr',                                              \
