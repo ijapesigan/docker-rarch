@@ -1,13 +1,7 @@
-.PHONY: all term clean
+.PHONY: all git term clean
 
 all:
 	sudo -E bash apptainer.sh
-
-# terminal
-
-term:
-	@(cd .bash && make)
-	@(cd .vim && make)
 
 clean:
 	@rm -rf *.sif

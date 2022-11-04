@@ -30,14 +30,10 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman \
             r
 
 # quarto
-RUN export QUARTO_VERSION="1.1.251"                                                                                                     ;\
-    mkdir -p /opt/quarto/${QUARTO_VERSION}                                                                                              ;\
-    curl -o quarto.tar.gz -L                                                                                                             \
-            "https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.tar.gz" ;\
-    tar -zxvf quarto.tar.gz                                                                                                              \
-            -C "/opt/quarto/${QUARTO_VERSION}"                                                                                           \
-            --strip-components=1                                                                                                        ;\
-    rm quarto.tar.gz
+RUN export QUARTO_VERSION=$(curl -s "https://api.github.com/repos/quarto-dev/quarto-cli/releases/latest" | grep '"tag_name":' | sed -E 's/.*"v*([^"]+)".*/\1/') ;\
+        curl -Lo quarto.tar.gz "https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.tar.gz" ;\
+        tar xf quarto.tar.gz -C /usr/local/bin quarto ;\
+        rm quarto.tar.gz
 
 # install R packages
 # development packages
@@ -74,20 +70,19 @@ RUN R -e "remotes::install_github( \
       )                            \
     )"
 
-
-RUN R -e "tinytex::install_tinytex( \
-      bundle = 'TinyTeX-2',         \
-      force = TRUE,                 \
-      dir = '/opt'                  \
-    )"
-
-ENV PATH="/opt/bin/x86_64-linux:${PATH}"
-
 RUN R -e "remotes::install_github( \
       c(                           \
         'jeksterslab/rProject'     \
       )                            \
     )"
+
+RUN R -e "tinytex::install_tinytex( \
+      bundle = 'TinyTeX-2',         \
+      force = TRUE,                 \
+      dir =  '/opt/TinyTeX'         \
+    )"
+
+ENV PATH="/opt/TinyTeX/bin/x86_64-linux:${PATH}"
 
 # remove the packages downloaded to image's pacman cache dir.
 RUN pacman -Sy --noconfirm pacman-contrib
