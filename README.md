@@ -1,6 +1,7 @@
 jeksterslab/rarch
 =================
-Ivan Jacob Agaloos Pes
+Ivan Jacob Agaloos Pesigan
+
 <!-- badges: start -->
 [![Docker Build](https://github.com/jeksterslab/docker-rarch/actions/workflows/docker-build.yml/badge.svg)](https://github.com/jeksterslab/docker-rarch/actions/workflows/docker-build.yml)
 [![Docker Build and Push](https://github.com/jeksterslab/docker-rarch/actions/workflows/docker-build-push.yml/badge.svg)](https://github.com/jeksterslab/docker-rarch/actions/workflows/docker-build-push.yml)
