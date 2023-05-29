@@ -58,11 +58,11 @@ R -e "install.packages(                                   \
     'styler',                                             \
     'testthat',                                           \
     'tidyverse',                                          \
-    'qpdf'                                                \
-    'semmcci'                                             \
-    'betaDelta'                                           \
-    'betaSandwich'                                        \
-    'betaNB'                                              \
+    'qpdf',                                               \
+    'semmcci',                                            \
+    'betaDelta',                                          \
+    'betaSandwich',                                       \
+    'betaNB',                                             \
     'betaMC'
   ),                                                      \
   repos = 'https://packagemanager.rstudio.com/all/latest' \
@@ -100,3 +100,9 @@ paccache -r -k0
 # Clean up
 rm -rf /var/lib/apt/lists/*
 rm -rf /tmp/*
+
+# Installation information
+echo -e "Session information...\n"
+R -q -e "sessionInfo()"
+echo -e "Installed packages...\n"
+R -q -e "unname(installed.packages()[, 1])"
