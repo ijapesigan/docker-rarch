@@ -1,7 +1,7 @@
 FROM archlinux
 
 COPY scripts/setup.sh /usr/src/local/setup.sh
-RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman && \
+RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman    \
     chmod 777 /usr/src/local/setup.sh                          && \
     ./usr/src/local/setup.sh                                   && \
     rm -rf /usr/src/local/setup.sh
