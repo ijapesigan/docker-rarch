@@ -26,6 +26,7 @@ pacman -Syu --noconfirm --needed                       \
     parallel                                           \
     vim                                                \
     nnn                                                \
+    tmux                                               \
     gcc-fortran                                        \
     openblas                                           \
     r
