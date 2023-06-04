@@ -3,7 +3,7 @@
 Ivan Jacob Agaloos Pesigan
 
 <!-- badges: start -->
-[![Docker Build and Push Weekly](https://github.com/jeksterslab/docker-rocker/actions/workflows/docker-build-push-weekly.yml/badge.svg)](https://github.com/jeksterslab/docker-rocker/actions/workflows/docker-build-push-weekly.yml)
+[![Docker Build and Push Weekly](https://github.com/jeksterslab/docker-rarch/actions/workflows/docker-build-push-weekly.yml/badge.svg)](https://github.com/jeksterslab/docker-rarch/actions/workflows/docker-build-push-weekly.yml)
 <!-- badges: end -->
 
 ## Description
