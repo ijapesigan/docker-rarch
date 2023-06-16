@@ -95,11 +95,9 @@ R -e "tinytex::install_tinytex( \
 )"
 
 ## build details
-echo "$(git ls-remote https://gitlab.archlinux.org/archlinux/archlinux-docker.git master)" > /etc/profile.d/container_init.sh
-awk '{print $1 > "/etc/profile.d/container_init.sh"}' /etc/profile.d/container_init.sh
-CONTAINER_RELEASE=$(cat /etc/profile.d/container_init.sh)
+CONTAINER_RELEASE=$( date '+%F-%H%M%S%2N' )
 echo "export CONTAINER_RELEASE=$CONTAINER_RELEASE" > /etc/profile.d/container_init.sh
-CONTAINER_RELEASE_MSG="\"This release is based on the commit $CONTAINER_RELEASE from the master branch of archlinux/archlinux-docker.\""
+CONTAINER_RELEASE_MSG="\"This release is based on the $CONTAINER_RELEASE build.\""
 echo "export CONTAINER_RELEASE_MSG=$CONTAINER_RELEASE_MSG" >> /etc/profile.d/container_init.sh
 mkdir -p /srv/build
 cd /srv/build
