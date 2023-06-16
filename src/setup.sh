@@ -64,7 +64,7 @@ R -e "install.packages(                                   \
     'betaDelta',                                          \
     'betaSandwich',                                       \
     'betaNB',                                             \
-    'betaMC'
+    'betaMC'                                              \
   ),                                                      \
   repos = 'https://packagemanager.rstudio.com/all/latest' \
 )"
@@ -94,6 +94,21 @@ R -e "tinytex::install_tinytex( \
     dir =  '/opt/TinyTeX'       \
 )"
 
+## build details
+echo "$(git ls-remote https://gitlab.archlinux.org/archlinux/archlinux-docker.git master)" > /etc/profile.d/container_init.sh
+awk '{print $1 > "/etc/profile.d/container_init.sh"}' /etc/profile.d/container_init.sh
+CONTAINER_RELEASE=$(cat /etc/profile.d/container_init.sh)
+echo "export CONTAINER_RELEASE=$CONTAINER_RELEASE" > /etc/profile.d/container_init.sh
+CONTAINER_RELEASE_MSG="\"This release is based on the commit $CONTAINER_RELEASE from the master branch of archlinux/archlinux-docker.\""
+echo "export CONTAINER_RELEASE_MSG=$CONTAINER_RELEASE_MSG" >> /etc/profile.d/container_init.sh
+mkdir -p /srv/build
+cd /srv/build
+touch CONTAINER_RELEASE_MSG
+touch CONTAINER_RELEASE
+echo "$CONTAINER_RELEASE_MSG" > CONTAINER_RELEASE_MSG
+sed -i s/\"//g CONTAINER_RELEASE_MSG
+echo "$CONTAINER_RELEASE" > CONTAINER_RELEASE
+
 # remove the packages downloaded to image's pacman cache dir.
 pacman -Sy --noconfirm pacman-contrib
 paccache -r -k0
@@ -107,3 +122,5 @@ echo -e "Session information...\n"
 R -q -e "sessionInfo()"
 echo -e "Installed packages...\n"
 R -q -e "unname(installed.packages()[, 1])"
+echo -e "\n$CONTAINER_RELEASE_MSG"
+echo -e "\nBuild done!"
