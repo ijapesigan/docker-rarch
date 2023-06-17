@@ -16,16 +16,5 @@
           "r.rterm.linux": "/usr/local/bin/radian"
       }
 	}
-  },
-
-  "forwardPorts": [8787],
-	"portsAttributes": {
-		"8787": {
-			"label": "Rstudio",
-			"requireLocalPort": true,
-			"onAutoForward": "ignore"
-		}
-	},
-
-	"postAttachCommand": "sudo rstudio-server start"
+  }
 }
