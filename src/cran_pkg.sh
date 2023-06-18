@@ -12,11 +12,7 @@ R -e "             \
     'vroom',       \
     'gert'         \
   );               \
-  for (i in seq_along(pkg)) { \
-    if (!require(pkg[i])) { \
-       install.packages(pkg[i], repos = 'https://packagemanager.rstudio.com/all/latest') \ 
-    } \
-  } \                                
+  for (i in seq_along(pkg)) if (!require(pkg[i])) install.packages(pkg[i], repos = 'https://packagemanager.rstudio.com/all/latest') \
 "
 
 ## dplyr database backends
@@ -34,11 +30,7 @@ R -e "              \
     'RSQLite',      \
     'fst'          \
   );               \
-  for (i in seq_along(pkg)) { \
-    if (!require(pkg[i])) { \
-       install.packages(pkg[i], repos = 'https://packagemanager.rstudio.com/all/latest') \ 
-    } \
-  } \                                
+  for (i in seq_along(pkg)) if (!require(pkg[i])) install.packages(pkg[i], repos = 'https://packagemanager.rstudio.com/all/latest') \                          
 "
 
 ## a bridge to far? -- brings in another 60 packages
@@ -46,11 +38,7 @@ R -e "           \
   pkg <- c(      \
     'tidymodels' \
   );             \
-  for (i in seq_along(pkg)) { \
-    if (!require(pkg[i])) { \
-       install.packages(pkg[i], repos = 'https://packagemanager.rstudio.com/all/latest') \ 
-    } \
-  } \                                
+  for (i in seq_along(pkg)) if (!require(pkg[i])) install.packages(pkg[i], repos = 'https://packagemanager.rstudio.com/all/latest') \                             
 "
 
 R -e "                \
@@ -80,9 +68,5 @@ R -e "                \
     'betaNB',         \
     'betaMC'          \
   );                  \
-  for (i in seq_along(pkg)) { \
-    if (!require(pkg[i])) { \
-       install.packages(pkg[i], repos = 'https://packagemanager.rstudio.com/all/latest') \ 
-    } \
-  } \                                
+  for (i in seq_along(pkg)) if (!require(pkg[i])) install.packages(pkg[i], repos = 'https://packagemanager.rstudio.com/all/latest') \                         
 "
