@@ -12,5 +12,5 @@ pacman -Syu --noconfirm --needed \
 
 # To add additional R packages,
 # for example, to install tidyverse and dplyr, do the following:
-Rscript -e "if (!require('tidyverse')) install.packages('tidyverse', repos = 'https://packagemanager.rstudio.com/all/latest')"
-Rscript -e "if (!require('dplyr')) install.packages('dplyr', repos = 'https://packagemanager.rstudio.com/all/latest')"
+Rscript -e "pkg <- 'tidyverse'; if (!require(pkg)) install.packages(pkg, repos = 'https://packagemanager.rstudio.com/all/latest')"
+Rscript -e "pkg <- 'dplyr'    ; if (!require(pkg)) install.packages(pkg, repos = 'https://packagemanager.rstudio.com/all/latest')"
