@@ -1,6 +1,6 @@
 FROM archlinux
 
-ADD src /usr/src/local/src
+ADD tools /usr/src/local/src
 RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman    \
     cd /usr/src/local/src                                      && \
     chmod 777 setup.sh                                         && \
