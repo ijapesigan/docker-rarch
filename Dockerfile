@@ -10,5 +10,5 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman    \
 ENV PATH="/opt/TinyTeX/bin/x86_64-linux:${PATH}"
 
 # extra metadata
-LABEL author="Ivan Jacob Agaloos Pesigan <learn.jeksterslab@gmail.com>"
-LABEL description="jeksterslab/rarch container."
+LABEL author="Ivan Jacob Agaloos Pesigan <ijapesigan@gmail.com>"
+LABEL description="ijapesigan/rarch container."

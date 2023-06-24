@@ -2,7 +2,7 @@
 
 set -e
 
-TEMP_VAR="$(git ls-remote https://github.com/jeksterslab/docker-rarch.git main)"
+TEMP_VAR="$(git ls-remote https://github.com/ijapesigan/docker-rarch.git main)"
 echo "$TEMP_VAR" > /etc/profile.d/container_init.sh
 awk '{print $1 > "/etc/profile.d/container_init.sh"}' /etc/profile.d/container_init.sh
 CONTAINER_RELEASE=$(cat /etc/profile.d/container_init.sh)
