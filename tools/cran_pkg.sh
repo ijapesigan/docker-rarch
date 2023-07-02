@@ -56,6 +56,7 @@ R -e "                \
       'languageserver', \
       'lintr',          \
       'magick',         \
+      'markdown',       \
       'microbenchmark', \
       'pdftools',       \
       'pkgdown',        \
@@ -68,6 +69,7 @@ R -e "                \
       'testthat',       \
       'tidyverse',      \
       'qpdf',           \
+      'quarto',         \
       'semmcci',        \
       'betaDelta',      \
       'betaSandwich',   \
