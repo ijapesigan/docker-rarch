@@ -62,6 +62,7 @@ R -e "                \
       'pkgdown',        \
       'printr',         \
       'ragg',           \
+      'RefManageR',     \
       'remotes',        \
       'rmarkdown',      \
       'rprojroot',      \
