@@ -43,3 +43,7 @@ rm -rf quarto*
 git clone https://github.com/dylanaraps/pfetch.git
 install pfetch/pfetch /usr/local/bin/
 ls -l /usr/local/bin/pfetch
+
+# duckdb
+pacman -Syu --noconfirm --needed                       \
+    mariadb
