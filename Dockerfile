@@ -1,4 +1,4 @@
-FROM archlinux
+FROM greyltc/archlinux-aur
 
 ADD tools /usr/src/local/src
 RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman    \
@@ -9,6 +9,9 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman    \
 
 ENV PATH="/opt/TinyTeX/bin/x86_64-linux:${PATH}"
 
+# AUR
+RUN aur-install v8
+
 # extra metadata
-LABEL author="Ivan Jacob Agaloos Pesigan <ijapesigan@gmail.com>"
-LABEL description="ijapesigan/rarch container."
+LABEL org.opencontainers.image.source="https://github.com/ijapesigan/docker-rarch" \
+      org.opencontainers.image.authors="Ivan Jacob Agaloos Pesigan <ijapesigan@gmail.com>"

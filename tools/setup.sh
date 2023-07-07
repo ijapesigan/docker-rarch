@@ -9,5 +9,6 @@ bash tinytex.sh
 bash custom.sh
 bash lavaan.sh
 bash openmx.sh
+bash dynr_sys.sh
 bash dynr.sh
 bash post.sh

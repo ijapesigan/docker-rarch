@@ -47,3 +47,8 @@ ls -l /usr/local/bin/pfetch
 # duckdb
 pacman -Syu --noconfirm --needed                       \
     mariadb
+
+# v8
+# git clone https://aur.archlinux.org/v8-r.git
+# cd v8-r
+# makepkg -si
