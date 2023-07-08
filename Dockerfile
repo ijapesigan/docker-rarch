@@ -1,5 +1,6 @@
 FROM greyltc/archlinux-aur
 
+RUN aur-install v8-r
 ADD tools /usr/src/local/src
 RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman    \
     cd /usr/src/local/src                                      && \
@@ -8,9 +9,6 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman    \
     rm -rf /usr/src/local/src
 
 ENV PATH="/opt/TinyTeX/bin/x86_64-linux:${PATH}"
-
-# AUR
-RUN aur-install v8
 
 # extra metadata
 LABEL org.opencontainers.image.source="https://github.com/ijapesigan/docker-rarch" \

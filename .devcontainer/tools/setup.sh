@@ -14,6 +14,3 @@ pacman -Syu --noconfirm --needed \
 # for example, to install tidyverse and dplyr, do the following:
 Rscript -e "pkg <- 'tidyverse'; if (!require(pkg)) install.packages(pkg, repos = 'https://packagemanager.rstudio.com/all/latest')"
 Rscript -e "pkg <- 'dplyr'    ; if (!require(pkg)) install.packages(pkg, repos = 'https://packagemanager.rstudio.com/all/latest')"
-
-# rProject
-Rscript -e "remotes::install_github('ijapesigan/rProject')"
