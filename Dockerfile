@@ -1,7 +1,6 @@
-FROM greyltc/archlinux-aur
+FROM archlinux
 
-RUN aur-install v8-r
-ADD tools /usr/src/local/src
+ADD scripts /usr/src/local/src
 RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman    \
     cd /usr/src/local/src                                      && \
     chmod 777 setup.sh                                         && \

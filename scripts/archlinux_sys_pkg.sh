@@ -49,6 +49,7 @@ pacman -Syu --noconfirm --needed                       \
     mariadb
 
 # v8
-# git clone https://aur.archlinux.org/v8-r.git
-# cd v8-r
-# makepkg -si
+echo "[archpkgs" >> /etc/pacman.conf
+echo "SigLevel = Optional TrustedOnly" >> /etc/pacman.conf
+echo "Server = https://garbuszus.de/archpkgs/$arch" >> /etc/pacman.
+pacman -Syu --noconfirm --needed v8-r
