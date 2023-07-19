@@ -49,7 +49,9 @@ pacman -Syu --noconfirm --needed                       \
     mariadb
 
 # v8
-echo "[archpkgs" >> /etc/pacman.conf
-echo "SigLevel = Optional TrustedOnly" >> /etc/pacman.conf
-echo "Server = https://garbuszus.de/archpkgs/$arch" >> /etc/pacman.
+{
+  echo [archpkgs]
+  echo SigLevel = Optional TrustedOnly
+  echo Server = https://garbuszus.de/archpkgs/\$arch
+} >> /etc/pacman.conf
 pacman -Syu --noconfirm --needed v8-r
