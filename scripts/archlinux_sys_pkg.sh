@@ -29,7 +29,8 @@ pacman -Syu --noconfirm --needed                       \
     tmux                                               \
     gcc-fortran                                        \
     openblas                                           \
-    r
+    r                                                  \
+    clang
 
 # quarto
 QUARTO_VERSION=$(curl -s "https://api.github.com/repos/quarto-dev/quarto-cli/releases/latest" | grep '"tag_name":' | sed -E 's/.*"v*([^"]+)".*/\1/')
