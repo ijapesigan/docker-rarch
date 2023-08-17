@@ -20,6 +20,7 @@ pacman -Syu --noconfirm --needed                       \
     xz                                                 \
     pandoc                                             \
     git                                                \
+    git-lfs                                            \
     lazygit                                            \
     bat                                                \
     rsync                                              \
