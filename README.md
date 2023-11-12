@@ -23,8 +23,8 @@ Docker and Apptainer/Singularity containers for `R` projects based on
 
 ## GitHub Actions
 
-The `Docker and Apptainer Build and Push` GitHub actions workflow
-performs the following:
+The `Docker and Apptainer Build and Push [amd64]` GitHub actions
+workflow performs the following:
 
 - Builds the Docker image specified by the `Dockerfile`.
 - Pushes the image to
