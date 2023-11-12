@@ -11,4 +11,5 @@ bash lavaan.sh
 bash openmx.sh
 bash dynr_sys.sh
 bash dynr.sh
+bash mpdemo.sh
 bash post.sh
