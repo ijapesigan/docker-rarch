@@ -1,7 +1,7 @@
 ijapesigan/rarch
 ================
 Ivan Jacob Agaloos Pesigan
-2023-11-12
+2023-11-14
 
 <!-- README.md is generated from .setup/readme/README.Rmd. Please edit that file -->
 <!-- badges: start -->
@@ -28,9 +28,8 @@ workflow performs the following:
 
 - Builds the Docker image specified by the `Dockerfile`.
 - Pushes the image to
-  [DockerHub](https://hub.docker.com/repository/docker/ijapesigan/rarch/general)
-  using the tags `latest` and
-  `date and time of build (YEAR-MM-DD-HHMMSSMS)`.
+  [DockerHub](https://hub.docker.com/r/ijapesigan/rarch) using the tags
+  `latest` and `date and time of build (YEAR-MM-DD-HHMMSSMS)`.
 - Builds the Singularity Image File (SIF) using Apptainer based on the
   Docker Hub image from the previous step.
 - Creates a GitHub release named `rarch-YEAR-MM-DD-HHMMSSMS`. Note that
