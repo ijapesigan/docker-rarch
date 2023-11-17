@@ -9,7 +9,11 @@ bash tinytex.sh
 bash custom.sh
 bash lavaan.sh
 bash openmx.sh
+bash metasem.sh
+bash symsem.sh
+bash semlbci.sh
+bash semmcci.sh
+bash mpdemo.sh
 bash dynr_sys.sh
 bash dynr.sh
-bash mpdemo.sh
 bash post.sh

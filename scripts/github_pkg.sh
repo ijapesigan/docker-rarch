@@ -8,11 +8,12 @@ R -e "remotes::install_github(      \
         'r-lib/cli',                \
         'r-lib/devtools',           \
         'r-hub/rhub',               \
-        'ijapesigan/rProject',     \
+        'ijapesigan/rProject',      \
         'jeksterslab/semmcci',      \
         'jeksterslab/betaDelta',    \
         'jeksterslab/betaSandwich', \
         'jeksterslab/betaNB',       \
-        'jeksterslab/betaMC'        \
+        'jeksterslab/betaMC',       \
+        'jeksterslab/simStateSpace' \
     )                               \
 )"
