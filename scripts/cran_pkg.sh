@@ -45,9 +45,9 @@ R -e "                                                      \
   )                                                         \
 "
 
-R -e "                \
-  install.packages(   \
-    c(                \
+R -e "                  \
+  install.packages(     \
+    c(                  \
       'covr',           \
       'devtools',       \
       'distro',         \
@@ -76,7 +76,23 @@ R -e "                \
       'betaSandwich',   \
       'betaNB',         \
       'betaMC'          \
-    ),                \
+    ),                  \
     repos = 'https://packagemanager.rstudio.com/all/latest' \
   ) \
+"
+
+
+# https://github.com/r-lib/xml2/issues/418
+
+R -e "                  \
+  install.packages(     \
+    c(                  \
+      'pak'             \
+    ),                  \
+    repos = 'https://packagemanager.rstudio.com/all/latest' \
+  ) \
+"
+
+R -e "                             \
+  pak::pak('KNnut/xml2@fix-build') \
 "
