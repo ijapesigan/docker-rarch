@@ -8,7 +8,8 @@ pacman -Syu --noconfirm --needed                       \
     
 # nloptr
 pacman -Syu --noconfirm --needed                       \
-    cmake
+    cmake                                              \
+    nlopt
 
 # misc3d
 pacman -Syu --noconfirm --needed                       \

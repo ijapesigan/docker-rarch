@@ -2,17 +2,18 @@
 
 set -e
 
-# semlbci dependencies
+# symsem dependencies
 R -e "                  \
   install.packages(     \
     c(                  \
+      'reticulate',     \
       'caracas'         \
     ),                  \
     repos = 'https://packagemanager.rstudio.com/all/latest' \
   ) \
 "
 
-# semlbci
+# symsem
 R -e "               \
   install.packages(  \
     c(               \

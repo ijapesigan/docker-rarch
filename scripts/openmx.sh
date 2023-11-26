@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-
+    
 # OpenMx dependencies
 R -e "                \
   install.packages(   \
