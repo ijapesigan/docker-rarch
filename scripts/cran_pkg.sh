@@ -75,7 +75,8 @@ R -e "                  \
       'betaDelta',      \
       'betaSandwich',   \
       'betaNB',         \
-      'betaMC'          \
+      'betaMC',         \
+      'simStateSpace'   \
     ),                  \
     repos = 'https://packagemanager.rstudio.com/all/latest' \
   ) \
