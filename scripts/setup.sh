@@ -4,7 +4,6 @@ set -e
 
 bash archlinux_sys_pkg.sh
 bash cran_pkg.sh
-bash github_pkg.sh
 bash tinytex.sh
 bash custom.sh
 bash lavaan.sh
@@ -18,4 +17,6 @@ bash longmi.sh
 bash mpdemo.sh
 bash dynr_sys.sh
 bash dynr.sh
+bash simstatespace.sh
+bash github_pkg.sh
 bash post.sh
