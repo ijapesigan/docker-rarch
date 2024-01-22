@@ -17,6 +17,14 @@ R -e "               \
   ) \
 "
 
+## DT
+R -e "               \
+  install.packages(  \
+    'DT',            \
+    repos = 'https://packagemanager.rstudio.com/all/latest' \
+  ) \
+"
+
 ## dplyr database backends
 R -e "                \
   install.packages(   \
