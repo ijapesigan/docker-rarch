@@ -7,3 +7,5 @@ R -e "remotes::install_github(      \
         'ijapesigan/longMI'         \
     )                               \
 )"
+
+echo -e "\nInstall longMI, done!"
