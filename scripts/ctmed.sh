@@ -4,10 +4,10 @@ set -e
 
 R -e "remotes::install_github(      \
     c(                              \
-        'jeksterslab/CTMed'      \
+        'jeksterslab/cTMed'         \
     )                               \
 )"
 
-R -e "library(CTMed)"
+R -e "library(cTMed)"
 
-echo -e "\nInstall CTMed, done!"
+echo -e "\nInstall cTMed, done!"
