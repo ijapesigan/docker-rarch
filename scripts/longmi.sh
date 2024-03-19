@@ -8,4 +8,6 @@ R -e "remotes::install_github(      \
     )                               \
 )"
 
+R -e "library(longMI)"
+
 echo -e "\nInstall longMI, done!"

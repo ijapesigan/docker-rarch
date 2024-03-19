@@ -20,5 +20,6 @@ bash dynr.sh
 bash ctsem.sh
 bash simstatespace.sh
 bash dynutils.sh
+bash ctmed.sh
 bash github_pkg.sh
 bash post.sh

@@ -4,10 +4,10 @@ set -e
 
 R -e "remotes::install_github(      \
     c(                              \
-        'jeksterslab/dynUtils'      \
+        'jeksterslab/CTMed'      \
     )                               \
 )"
 
-R -e "library(dynUtils)"
+R -e "library(CTMed)"
 
-echo -e "\nInstall dynUtils, done!"
+echo -e "\nInstall CTMed, done!"
