@@ -71,6 +71,7 @@ R -e "                  \
       'printr',         \
       'ragg',           \
       'RefManageR',     \
+      'rhub',           \
       'remotes',        \
       'rmarkdown',      \
       'rprojroot',      \
