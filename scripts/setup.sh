@@ -4,7 +4,6 @@ set -e
 
 bash archlinux_sys_pkg.sh
 bash cran_pkg.sh
-bash github.sh
 bash rproject.sh
 bash tinytex.sh
 bash custom.sh
