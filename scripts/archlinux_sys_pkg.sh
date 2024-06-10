@@ -22,6 +22,7 @@ pacman -Syu --noconfirm --needed                       \
     git                                                \
     git-lfs                                            \
     lazygit                                            \
+    libgit2                                            \
     bat                                                \
     rsync                                              \
     parallel                                           \
