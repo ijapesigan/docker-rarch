@@ -92,13 +92,14 @@ jobs:
         name: Zip artifact
         uses: thedoctor0/zip-release@0.7.1
         with:
-          filename: ${{ secrets.DOCKER_HUB_CONTAINER }}-${{ env.NOW }}.zip
+          type: 'tar'
+          filename: ${{ secrets.DOCKER_HUB_CONTAINER }}-${{ env.NOW }}.tar.gz
           exclusions: '*.git* Dockerfile Makefile project.Rproj README.md *.devcontainer/* /*scripts/* *.setup/*'
       - 
         name: GitHub release
         uses: softprops/action-gh-release@v1
         with:
           body_path: ./release.txt
-          files: ./${{ secrets.DOCKER_HUB_CONTAINER }}-${{ env.NOW }}.zip
+          files: ./${{ secrets.DOCKER_HUB_CONTAINER }}-${{ env.NOW }}.tar.gz
           name: ${{ secrets.DOCKER_HUB_CONTAINER }}-${{ env.NOW }}
           tag_name: ${{ env.NOW }}
