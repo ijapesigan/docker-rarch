@@ -57,7 +57,7 @@ pacman -Syu --noconfirm --needed                       \
   echo SigLevel = Optional TrustedOnly
   echo Server = https://garbuszus.de/archpkgs/\$arch
 } >> /etc/pacman.conf
-pacman -Syu --noconfirm --needed r-v8
+pacman -Syu --noconfirm --needed v8-r
 
 # xml2
 pacman -Syu --noconfirm --needed libxml2
