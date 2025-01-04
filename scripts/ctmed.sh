@@ -2,11 +2,18 @@
 
 set -e
 
-R -e "remotes::install_github(      \
-    c(                              \
-        'jeksterslab/cTMed'         \
-    )                               \
-)"
+# cTMed dependencies
+install2.r --error --skipinstalled -n -1 \
+    Rcpp                                 \
+    RcppArmadillo                        \
+    numDeriv                             \
+    ctsem                                \
+    simStateSpace                        \
+    expm
+
+# cTMed
+install2.r --error --skipinstalled -n -1 \
+    cTMed
 
 R -e "library(cTMed)"
 
