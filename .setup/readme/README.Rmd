@@ -18,8 +18,6 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![Make Project](https://github.com/ijapesigan/docker-rarch/actions/workflows/make.yml/badge.svg)](https://github.com/ijapesigan/docker-rarch/actions/workflows/make.yml)
-[![Docker Build and Push [amd64/arm64] (Daily)](https://github.com/ijapesigan/docker-rarch/actions/workflows/docker-build-push-daily-amd64-arm64.yml/badge.svg)](https://github.com/ijapesigan/docker-rarch/actions/workflows/docker-build-push-daily-amd64-arm64.yml)
-[![Docker Build and Push [amd64/arm64]](https://github.com/ijapesigan/docker-rarch/actions/workflows/docker-build-push-amd64-arm64.yml/badge.svg)](https://github.com/ijapesigan/docker-rarch/actions/workflows/docker-build-push-amd64-arm64.yml)
 [![Docker and Apptainer Build [amd64]](https://github.com/ijapesigan/docker-rarch/actions/workflows/docker-apptainer-build-amd64.yml/badge.svg)](https://github.com/ijapesigan/docker-rarch/actions/workflows/docker-apptainer-build-amd64.yml)
 [![Docker Build and Push [amd64] (Daily)](https://github.com/ijapesigan/docker-rarch/actions/workflows/docker-build-push-daily-amd64/badge.svg)](https://github.com/ijapesigan/docker-rarch/actions/workflows/docker-build-push-daily-amd64)
 [![Shell Check](https://github.com/ijapesigan/docker-rarch/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/ijapesigan/docker-rarch/actions/workflows/shellcheck.yml)
