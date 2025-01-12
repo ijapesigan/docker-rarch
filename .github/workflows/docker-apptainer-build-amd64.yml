@@ -1,4 +1,4 @@
-name: Docker and Apptainer Build and Push [amd64]
+name: Docker and Apptainer Build [amd64]
 
 on:
   workflow_run:
@@ -74,31 +74,3 @@ jobs:
         run: |
           apptainer exec ${{ secrets.DOCKER_HUB_CONTAINER }}-${{ env.NOW }}.sif cat /etc/os-release
           apptainer exec ${{ secrets.DOCKER_HUB_CONTAINER }}-${{ env.NOW }}.sif cat /srv/build/CONTAINER_RELEASE_MSG > release.txt
-      -
-        name: Upload Singularity Image File
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ secrets.DOCKER_HUB_CONTAINER }}-${{ env.NOW }}.sif
-          path: ./${{ secrets.DOCKER_HUB_CONTAINER }}-${{ env.NOW }}.sif
-      -
-        name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: ${{ secrets.DOCKER_HUB_CONTAINER }}-${{ env.NOW }}.sif
-      -
-        name: Test artifact download
-        run: ls -R
-      -
-        name: Zip artifact
-        uses: thedoctor0/zip-release@0.7.1
-        with:
-          filename: ${{ secrets.DOCKER_HUB_CONTAINER }}-${{ env.NOW }}.zip
-          exclusions: '*.git* Dockerfile Makefile project.Rproj README.md *.devcontainer/* /*scripts/* *.setup/*'
-      - 
-        name: GitHub release
-        uses: softprops/action-gh-release@v1
-        with:
-          body_path: ./release.txt
-          files: ./${{ secrets.DOCKER_HUB_CONTAINER }}-${{ env.NOW }}.zip
-          name: ${{ secrets.DOCKER_HUB_CONTAINER }}-${{ env.NOW }}
-          tag_name: ${{ env.NOW }}

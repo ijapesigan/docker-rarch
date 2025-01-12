@@ -2,6 +2,34 @@
 
 set -e
 
+## rProject
+R -e "               \
+  install.packages(  \
+    c(               \
+      'cffr',        \
+      'covr',        \
+      'devtools',    \
+      'distro',      \
+      'knitr',       \
+      'lintr',       \
+      'pkgdown',     \
+      'quarto',      \
+      'Rcpp',        \
+      'remotes',     \
+      'RefManageR',  \
+      'rmarkdown',   \
+      'roxygen2',    \
+      'rprojroot',   \
+      'stats',       \
+      'styler',      \
+      'tinytex',     \
+      'utils',       \
+      'testthat'     \
+    ),               \
+    repos = 'https://packagemanager.rstudio.com/all/latest' \
+  ) \
+"
+
 ## tidyverse
 R -e "               \
   install.packages(  \

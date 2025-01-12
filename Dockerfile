@@ -7,7 +7,7 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman    \
     ./setup.sh                                                 && \
     rm -rf /usr/src/local/src
 
-ENV PATH="/opt/TinyTeX/bin/x86_64-linux:${PATH}"
+ENV PATH="/opt/TinyTeX/bin/x86_64-linux:/opt/TinyTeX/bin/aarch64-linux:${PATH}"
 
 # extra metadata
 LABEL org.opencontainers.image.source="https://github.com/ijapesigan/docker-rarch" \
