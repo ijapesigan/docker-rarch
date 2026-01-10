@@ -23,8 +23,8 @@ bash ctsem.sh
 bash simstatespace.sh
 bash dynutils.sh
 bash ctmed.sh
-bash fitdtvarmx.sh
-bash fitctvarmx.sh
+# bash fitdtvarmx.sh
+# bash fitctvarmx.sh
 bash metavar.sh
 bash github_pkg.sh
 bash post.sh

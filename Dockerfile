@@ -2,9 +2,9 @@ FROM archlinux
 
 ADD scripts /usr/src/local/src
 RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman    \
-    cd /usr/src/local/src                                      && \
-    chmod 777 setup.sh                                         && \
-    ./setup.sh                                                 && \
+    cd /usr/src/local/src                                       && \
+    chmod 0755 setup.sh                                         && \
+    ./setup.sh                                                  && \
     rm -rf /usr/src/local/src
 
 ENV PATH="/opt/TinyTeX/bin/x86_64-linux:/opt/TinyTeX/bin/aarch64-linux:${PATH}"
