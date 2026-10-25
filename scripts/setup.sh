@@ -2,6 +2,10 @@
 
 set -e
 
+# the V8 R package (a dependency of some CRAN packages) uses a static
+# libv8: Arch has no libv8 package
+export DOWNLOAD_STATIC_LIBV8=1
+
 bash archlinux_sys_pkg.sh
 bash littler.sh
 bash cran_pkg.sh
