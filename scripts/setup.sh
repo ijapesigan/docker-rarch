@@ -3,6 +3,7 @@
 set -e
 
 bash archlinux_sys_pkg.sh
+bash littler.sh
 bash cran_pkg.sh
 bash rproject.sh
 bash tinytex.sh
@@ -25,6 +26,5 @@ bash dynutils.sh
 bash ctmed.sh
 # bash fitdtvarmx.sh
 # bash fitctvarmx.sh
-bash metavar.sh
 bash github_pkg.sh
 bash post.sh

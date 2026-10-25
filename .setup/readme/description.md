@@ -1,0 +1,1 @@
+An R image for projects based on [Arch Linux](https://archlinux.org/), with rProject, TinyTeX, structural equation modeling, and dynamic and state-space models (packages installed by the scripts in `scripts/`).
