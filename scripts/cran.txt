@@ -1,0 +1,76 @@
+# CRAN packages wanted, one per line, never their dependencies
+# (install-cran.sh). On Arch, pak's system lookup is skipped (no apt):
+# the system libraries come from archlinux_sys_pkg.sh, openmx_sys.sh and
+# dynr_sys.sh, which run first; install2.r is littler.sh's.
+
+# from cran_pkg.sh: rProject
+cffr
+covr
+devtools
+distro
+knitr
+lintr
+pkgdown
+quarto
+Rcpp
+remotes
+RefManageR
+rmarkdown
+roxygen2
+rprojroot
+stats
+styler
+tinytex
+utils
+testthat
+
+# from cran_pkg.sh: tidyverse, DT, dplyr database backends, tidymodels
+tidyverse
+BiocManager
+vroom
+gert
+DT
+arrow
+dbplyr
+DBI
+dtplyr
+duckdb
+nycflights13
+Lahman
+RMariaDB
+RPostgres
+RSQLite
+fst
+tidymodels
+
+# from cran_pkg.sh: tools and the author's packages
+ggplot2
+languageserver
+magick
+markdown
+microbenchmark
+pdftools
+printr
+ragg
+rhub
+qpdf
+semmcci
+betaDelta
+betaSandwich
+betaNB
+betaMC
+simStateSpace
+
+# from the old package scripts, in their setup.sh order (lavaan.sh,
+# metasem.sh, symsem.sh, semlbci.sh, semmcci.sh, mplusautomation.sh,
+# ctsem.sh, simstatespace.sh, ctmed.sh); their dependency lists are
+# their Depends, Imports and LinkingTo, which install2.r installs.
+# metaSEM pulls CRAN OpenMx here; openmx.sh then replaces it with the
+# OpenMx repository's build
+lavaan
+metaSEM
+symSEM
+semlbci
+MplusAutomation
+ctsem
+cTMed

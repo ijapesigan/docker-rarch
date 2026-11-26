@@ -32,13 +32,15 @@ pacman -Syu --noconfirm --needed                       \
     gcc-fortran                                        \
     openblas                                           \
     r                                                  \
-    clang
+    clang                                              \
+    libuv                                              \
+    postgresql-libs
 
 # quarto
-QUARTO_VERSION=$(curl -s "https://api.github.com/repos/quarto-dev/quarto-cli/releases/latest" | grep '"tag_name":' | sed -E 's/.*"v*([^"]+)".*/\1/')
+# the latest release from the redirect (no GitHub API, no token needed)
+QUARTO_VERSION=$(curl -fsSLI -o /dev/null -w '%{url_effective}' "https://github.com/quarto-dev/quarto-cli/releases/latest" | sed -E 's|.*/v?([^/]+)$|\1|')
 export QUARTO_VERSION
-curl -Lo quarto.tar.gz "https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.tar.gz"
-mkdir -p /usr/local
+curl -fsSL -o quarto.tar.gz "https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.tar.gz"
 tar -zxvf quarto.tar.gz -C /usr/local --strip-components=1
 rm -rf quarto*
 

@@ -2,6 +2,7 @@ FROM archlinux
 
 ADD scripts /usr/src/local/src
 RUN --mount=type=cache,sharing=locked,target=/var/cache/pacman    \
+    --mount=type=secret,id=GITHUB_PAT                           \
     cd /usr/src/local/src                                       && \
     chmod 0755 setup.sh                                         && \
     ./setup.sh                                                  && \

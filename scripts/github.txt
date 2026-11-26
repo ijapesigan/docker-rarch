@@ -1,0 +1,24 @@
+# GitHub packages wanted, one per line (owner/repo[@ref]), never their
+# dependencies (install-github.sh, after the CRAN packages; on Arch the
+# system libraries come from the pacman scripts)
+
+# from github_pkg.sh (longmi.sh and dynutils.sh were in it too)
+nx10/httpgd
+rstudio/tinytex
+r-lib/cli
+r-lib/devtools
+r-lib/roxygen2
+ijapesigan/rProject
+ijapesigan/longMI
+jeksterslab/semmcci
+jeksterslab/betaDelta
+jeksterslab/betaSandwich
+jeksterslab/betaNB
+jeksterslab/betaMC
+jeksterslab/simStateSpace
+jeksterslab/bootStateSpace
+jeksterslab/cTMed
+jeksterslab/dynUtils
+jeksterslab/dynTools
+jeksterslab/fitVARMxID
+jeksterslab/metaDyn
